@@ -1,0 +1,20 @@
+{
+  "name": "regiflow.umbraco.web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dist": "npm run sass && npm run minify-css && npm run esbuild && npm run minify-js",
+    "sass": "sass prebuild_assets/scss/main.scss:dist/main.css --no-source-map",
+    "minify-css": "esbuild dist/main.css --minify --outfile=dist/main.min.css",
+    "esbuild": "esbuild prebuild_assets/js/main.js --bundle --outfile=dist/main.js",
+    "minify-js": "esbuild dist/main.js --minify --outfile=dist/main.min.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.24.0",
+    "sass": "^1.79.4"
+  }
+}

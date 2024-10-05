@@ -399,3 +399,7 @@ FodyWeavers.xsd
 
 # Custom ignores
 /RegiFlow.Umbraco.Web/App_Data/TEMP
+/RegiFlow.Umbraco.Web/dist/main.css
+/RegiFlow.Umbraco.Web/dist/main.js
+/RegiFlow.Umbraco.Web/dist/main.min.css
+/RegiFlow.Umbraco.Web/dist/main.min.js
