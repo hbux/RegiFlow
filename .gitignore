@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Custom ignores
+/RegiFlow.Umbraco.Web/App_Data/TEMP

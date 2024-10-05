@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{338DDA7C-E5CE-4F8E-8919-36A2E9A56CC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegiFlow.Umbraco.Web", "RegiFlow.Umbraco.Web\RegiFlow.Umbraco.Web.csproj", "{03D15727-2F3F-4731-828E-90853D68354C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03D15727-2F3F-4731-828E-90853D68354C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D15727-2F3F-4731-828E-90853D68354C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D15727-2F3F-4731-828E-90853D68354C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D15727-2F3F-4731-828E-90853D68354C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{03D15727-2F3F-4731-828E-90853D68354C} = {338DDA7C-E5CE-4F8E-8919-36A2E9A56CC8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D110E63-D8A5-4EEF-A7D4-8C005253A976}
+	EndGlobalSection
+EndGlobal
