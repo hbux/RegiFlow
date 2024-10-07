@@ -1,0 +1,66 @@
+.btn {
+    font-size: 14px;
+    font-weight: $fw-lg;
+    border-radius: $br-md;
+    background-color: $transparent;
+    color: $secondary;
+    transition: none;
+    box-shadow: none;
+
+    &:hover {
+        background-color: $transparent;
+        color: $secondary;
+        box-shadow: none;
+    }
+
+    &:focus-within,
+    &:focus-visible {
+        outline-style: solid;
+        outline-color: $primary;
+        outline-width: 2px;
+        outline-offset: 2px;
+        border-radius: $br-md;
+    }
+}
+
+.btn--primary {
+    border: 1.5px solid $primary;
+    background-color: $primary;
+    color: $white;
+
+    &:focus-within,
+    &:focus-visible {
+        border-color: $grey !important;
+    }
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+        background-color: $primary-hover !important;
+        border-color: $primary-hover !important;
+        color: $white !important;
+        outline: none !important;
+    }
+}
+
+.btn--secondary {
+    border: 1.5px solid $grey;
+    background-color: $white;
+    color: $secondary;
+
+    &:focus-within,
+    &:focus-visible {
+        border-color: $grey !important;
+    }
+
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+        background-color: $secondary-hover !important;
+        border-color: $grey !important;
+        color: $secondary !important;
+        outline: none !important;
+    }
+}

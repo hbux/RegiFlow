@@ -331,6 +331,7 @@
   <ItemGroup>
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
+    <Compile Include="App_Data\Models\Home.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaArticle.generated.cs" />
@@ -373,6 +374,12 @@
     <Content Include="Views\Partials\BlockList\Default.cshtml" />
     <Content Include="prebuild_assets\scss\main.scss" />
     <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="prebuild_assets\scss\_mixins.scss" />
+    <Content Include="prebuild_assets\scss\_variables.scss" />
+    <Content Include="prebuild_assets\scss\_global.scss" />
+    <Content Include="prebuild_assets\scss\_buttons.scss" />
+    <Content Include="prebuild_assets\scss\_header.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

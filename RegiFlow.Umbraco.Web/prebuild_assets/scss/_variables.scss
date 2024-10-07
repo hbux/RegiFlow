@@ -1,0 +1,28 @@
+/* Colors */
+$primary: rgb(79 70 229 / 1);
+$primary-hover: rgb(99 102 241 / 1);
+$secondary: rgb(17 24 39 / 1);
+$secondary-hover: rgb(249 250 251 / 1);
+$tertiary: rgb(249 250 251 / 1);
+
+/* Standard colors */
+$white: #fff;
+$black: #000;
+$grey: rgb(209 213 219 / 1);
+$transparent: transparent;
+
+/* Border radius */
+$br-sm: 0.250rem;
+$br-md: 0.375rem;
+$br-lg: 0.875rem;
+
+/* Fonts */
+$fw-sm: 400;
+$fw-md: 600;
+$fw-lg: 700;
+
+/* Breakpoints */
+$bp-md: "(min-width: 768px)";
+$bp-lg: "(min-width: 992px)";
+$bp-xl: "(min-width: 1200px)";
+$bp-xxl: "(min-width: 1400px)";

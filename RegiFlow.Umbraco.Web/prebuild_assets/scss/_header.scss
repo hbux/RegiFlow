@@ -1,0 +1,40 @@
+.navbar {
+    background-color: $white;
+    border-bottom: 1.5px solid $grey !important;
+}
+
+.navbar__brand {
+    border-radius: $br-md;
+
+    &:hover,
+    &:active,
+    &.active {
+        .navbar__brand--primary {
+            color: $primary-hover;
+        }
+
+        .navbar__brand--secondary {
+            color: $primary-hover;
+        }
+    }
+
+    &--primary {
+        color: $primary;
+        font-weight: $fw-lg;
+    }
+
+    &--secondary {
+        color: $secondary;
+        font-weight: $fw-lg;
+    }
+
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+        outline-style: solid;
+        outline-color: $primary;
+        outline-width: 2px;
+        outline-offset: 2px;
+        border-radius: $br-md;
+    }
+}

@@ -22,16 +22,16 @@
 </head>
 <body>
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-md border-bottom shadow-sm">
+        <nav class="navbar navbar-expand-md border-bottom">
             <div class="container container-fluid">
-                <a class="navbar-brand navbar__brand" href="/">
+                <a class="navbar-brand navbar__brand d-flex" href="/">
                     <span class="navbar__brand--primary">Regi</span>
                     <span class="navbar__brand--secondary">Flow</span>
                 </a>
                 <div class="d-flex d-md-none justify-content-end">
                     <a class="btn btn--secondary"
                        href="/"
-                       target="_self">Sign up</a>
+                       target="_self">Sign in</a>
                 </div>
                 <div class="d-none d-md-flex justify-content-end">
                     <div class="d-flex flex-column flex-md-row mt-5 mt-md-0">
@@ -47,6 +47,9 @@
         </nav>
     </header>
     <main>
+        <div class="page--wrapper">
+            @RenderBody()
+        </div>
     </main>
     <footer>
     </footer>
