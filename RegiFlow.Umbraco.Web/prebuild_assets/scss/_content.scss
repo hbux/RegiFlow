@@ -1,0 +1,60 @@
+.wrapper__register {
+    &--outer {
+        background-color: $tertiary;
+        height: 100%;
+        min-height: 100vh;
+    }
+
+    &--inner {
+        @include bp(sm) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.card__register {
+    border: 0;
+    border-radius: 0;
+    max-width: 450px;
+
+    @include bp(sm) {
+        border-radius: $br-md;
+    }
+
+    &--header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 0 1.25rem 0;
+
+        .navbar__brand {
+            margin: 1rem 0;
+        }
+    }
+
+    &--body {
+        padding: 2.25rem 1.5rem;
+
+        @include bp(sm) {
+            padding: 3rem 2rem;
+        }
+
+        p {
+            font-size: 11px;
+        }
+    }
+
+    &--footer {
+        text-align: center;
+        padding: 2rem 0 2rem 0;
+
+        @include bp(sm) {
+            padding: 2rem 3rem 0;
+        }
+    }
+}

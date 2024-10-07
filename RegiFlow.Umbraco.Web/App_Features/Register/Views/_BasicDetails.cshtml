@@ -1,4 +1,46 @@
-﻿@model BasicDetails
+﻿@using RegiFlow.Umbraco.Web.App_Features.Register.Controllers
+@model BasicDetailsFormModel
 @{ 
+    Html.EnableClientValidation();
+    Html.EnableUnobtrusiveJavaScript();
+}
 
+@using (Html.BeginUmbracoForm<RegisterSurfaceController>(
+    action: nameof(RegisterSurfaceController.ContinueToPlanSelection),
+    method: FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-12">
+            <div class="mb-4">
+                @Html.LabelFor(x => x.EmailAddress, new { @class = "form__label form-label" })
+                @Html.TextBoxFor(x => x.EmailAddress, new { @class = "form__control form-control" })
+                @Html.ValidationMessageFor(x => x.EmailAddress)
+            </div>
+            <div class="mb-4">
+                @Html.LabelFor(x => x.Password, new { @class = "form__label form-label" })
+                @Html.PasswordFor(x => x.Password, new { @class = "form__control form-control" })
+                @Html.ValidationMessageFor(x => x.Password)
+            </div>
+            <div class="mb-4">
+                @Html.LabelFor(x => x.ConfirmPassword, new { @class = "form__label form-label" })
+                @Html.PasswordFor(x => x.ConfirmPassword, new { @class = "form__control form-control" })
+                @Html.ValidationMessageFor(x => x.ConfirmPassword)
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                    @Html.CheckBoxFor(x => x.AgreeToReceivePromotionalEmails, new { @class = "form__control--check form-check-input" })
+                    @Html.LabelFor(x => x.AgreeToReceivePromotionalEmails, new { @class = "form-check-label form__label--check" })
+                    @Html.ValidationMessageFor(x => x.AgreeToReceivePromotionalEmails)
+                </div>
+            </div>
+            <div class="d-grid mb-3">
+                <button class="btn btn--primary" type="submit">Agree &amp; continue</button>
+            </div>
+            <div>
+                <p class="text__muted">By creating an account, you agree to our Terms of Service and Privacy Policy. Your information will be used in accordance with our policies, including the processing of payment details and subscription management.</p>
+            </div>
+        </div>
+    </div>
 }

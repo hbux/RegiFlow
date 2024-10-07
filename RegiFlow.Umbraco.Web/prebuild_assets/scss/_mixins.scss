@@ -1,5 +1,10 @@
 @mixin bp($point) {
-    @if $point == md {
+    @if $point == sm {
+        @media #{$bp-sm} {
+            @content;
+        }
+    }
+    @else if $point == md {
         @media #{$bp-md} {
             @content;
         }

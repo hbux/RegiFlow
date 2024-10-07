@@ -3,3 +3,38 @@
 body, * {
     font-family: "Inter", sans-serif;
 }
+
+h1 {
+    color: $secondary;
+    font-size: 24px;
+    font-weight: $fw-lg;
+}
+
+.link__primary {
+    font-size: 14px;
+    font-weight: $fw-md;
+    text-decoration: none;
+    color: $primary;
+
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+        outline-style: solid;
+        outline-color: $primary;
+        outline-width: 2px;
+        outline-offset: 2px;
+        border-radius: $br-md;
+    }
+
+    &:hover,
+    &:active,
+    &.active {
+        color: $primary-hover;
+    }
+}
+
+.text__muted {
+    color: $light;
+    font-size: 14px;
+    font-weight: $fw-sm;
+}

@@ -1,6 +1,6 @@
 .btn {
     font-size: 14px;
-    font-weight: $fw-lg;
+    font-weight: $fw-md;
     border-radius: $br-md;
     background-color: $transparent;
     color: $secondary;
@@ -30,7 +30,7 @@
 
     &:focus-within,
     &:focus-visible {
-        border-color: $grey !important;
+        border-color: $primary !important;
     }
 
     &:focus,

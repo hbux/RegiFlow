@@ -1,0 +1,57 @@
+.form__label {
+    font-size: 14px;
+    font-weight: $fw-md;
+}
+
+.form__control {
+    border: 1.5px solid $grey;
+    color: $secondary;
+    font-size: 14px;
+    font-weight: $fw-sm;
+    background-color: $white;
+    transition: none;
+
+    &::placeholder {
+        color: $light;
+    }
+
+    &:focus,
+    &:focus-visible {
+        color: $secondary;
+        background-color: $white;
+        border-color: $primary;
+        outline: 0;
+        box-shadow: 0 0 0 .05rem $primary;
+    }
+}
+
+.form__label--check {
+    font-size: 14px;
+    font-weight: $fw-sm;
+}
+
+.form__control--check {
+    border: 1.5px solid $grey;
+
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+        outline-style: solid;
+        outline-color: $primary;
+        outline-width: 2px;
+        outline-offset: 2px;
+        border-color: $grey;
+        box-shadow: none;
+    }
+}
+
+.form__control--check:checked {
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.field-validation-error {
+    font-size: 14px;
+    font-weight: $fw-md;
+    color: $danger;
+}

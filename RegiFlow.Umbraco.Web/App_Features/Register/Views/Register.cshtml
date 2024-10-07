@@ -3,4 +3,34 @@
     Layout = ViewTypes.Layouts.Core;
 }
 
-@Html.Action(ViewTypes.Register.BasicDetailsAction, ViewTypes.Register.Controller)
+<div class="wrapper__register--outer">
+    <div class="wrapper__register--inner">
+        <div class="card__register--header">
+            <a class="navbar-brand navbar__brand d-flex" href="/">
+                <span class="navbar__brand--primary">Regi</span>
+                <span class="navbar__brand--secondary">Flow</span>
+            </a>
+            <div>
+                <h1>Create an account to continue</h1>
+            </div>
+        </div>
+        <div class="card__register card shadow-sm">
+            <div class="card__register--body card-body">
+                @Html.Action(ViewTypes.Register.BasicDetailsAction, ViewTypes.Register.Controller)
+            </div>
+        </div>
+        <div class="card__register--footer">
+            <p class="text__muted">
+                Already a member? <a class="link__primary"
+                                     href="/"
+                                     target="_self">Sign in</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+@section postContentScripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.js"></script>
+} 

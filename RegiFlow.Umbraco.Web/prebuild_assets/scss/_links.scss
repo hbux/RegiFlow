@@ -1,0 +1,22 @@
+.link__primary {
+    font-size: 14px;
+    font-weight: $fw-md;
+    text-decoration: none;
+    color: $primary;
+
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+        outline-style: solid;
+        outline-color: $primary;
+        outline-width: 2px;
+        outline-offset: 2px;
+        border-radius: $br-md;
+    }
+
+    &:hover,
+    &:active,
+    &.active {
+        color: $primary-hover;
+    }
+}

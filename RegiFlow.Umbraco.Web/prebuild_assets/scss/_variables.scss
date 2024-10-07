@@ -8,7 +8,9 @@ $tertiary: rgb(249 250 251 / 1);
 /* Standard colors */
 $white: #fff;
 $black: #000;
+$light: rgb(107 114 128 / 1);
 $grey: rgb(209 213 219 / 1);
+$danger: rgb(205 61 100 / 1);
 $transparent: transparent;
 
 /* Border radius */
@@ -22,6 +24,7 @@ $fw-md: 600;
 $fw-lg: 700;
 
 /* Breakpoints */
+$bp-sm: "(min-width: 450px)";
 $bp-md: "(min-width: 768px)";
 $bp-lg: "(min-width: 992px)";
 $bp-xl: "(min-width: 1200px)";

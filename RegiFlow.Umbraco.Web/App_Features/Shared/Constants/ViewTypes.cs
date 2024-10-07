@@ -5,7 +5,7 @@
         public static class Layouts
         {
             public const string None = null;
-            public const string Core = "~/Views/Layouts.cshtml";
+            public const string Core = "~/Views/_Layout.cshtml";
         }
 
         public static class Account

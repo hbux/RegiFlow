@@ -398,6 +398,9 @@
     <Content Include="prebuild_assets\scss\_header.scss" />
     <Content Include="App_Features\Account\Overview\Views\Account.cshtml" />
     <Content Include="App_Features\Register\Views\Register.cshtml" />
+    <Content Include="prebuild_assets\scss\_content.scss" />
+    <Content Include="prebuild_assets\scss\_links.scss" />
+    <Content Include="prebuild_assets\scss\_forms.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
