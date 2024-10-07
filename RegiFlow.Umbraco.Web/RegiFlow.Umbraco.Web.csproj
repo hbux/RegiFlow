@@ -329,15 +329,28 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Models\Account.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\Home.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\Register.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaArticle.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaAudio.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaVectorGraphics.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaVideo.generated.cs" />
+    <Compile Include="App_Features\Account\Overview\Composers\AccountComposer.cs" />
+    <Compile Include="App_Features\Account\Overview\Controllers\AccountController.cs" />
+    <Compile Include="App_Features\Account\Overview\Models\AccountViewModel.cs" />
+    <Compile Include="App_Features\Account\Overview\Services\AccountService.cs" />
+    <Compile Include="App_Features\Register\Composers\RegisterComposer.cs" />
+    <Compile Include="App_Features\Register\Controllers\RegisterController.cs" />
+    <Compile Include="App_Features\Register\Controllers\RegisterSurfaceController.cs" />
+    <Compile Include="App_Features\Register\Models\RegisterFormModel.cs" />
+    <Compile Include="App_Features\Register\Models\RegisterViewModel.cs" />
+    <Compile Include="App_Features\Register\Services\RegisterService.cs" />
+    <Compile Include="App_Features\Shared\Constants\ViewTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -361,6 +374,9 @@
     <Content Include="App_Data\TEMP\TypesCache\umbraco-types.LAPTOP-R6VIRE30.hash" />
     <Content Include="App_Data\TEMP\TypesCache\umbraco-types.LAPTOP-R6VIRE30.list" />
     <Content Include="package.json" />
+    <Content Include="App_Features\Account\Overview\Views\Web.config" />
+    <Content Include="App_Features\Register\Views\Web.config" />
+    <Content Include="App_Features\Register\Views\_BasicDetails.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -380,6 +396,8 @@
     <Content Include="prebuild_assets\scss\_global.scss" />
     <Content Include="prebuild_assets\scss\_buttons.scss" />
     <Content Include="prebuild_assets\scss\_header.scss" />
+    <Content Include="App_Features\Account\Overview\Views\Account.cshtml" />
+    <Content Include="App_Features\Register\Views\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
