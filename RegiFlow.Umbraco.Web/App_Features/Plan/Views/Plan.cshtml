@@ -1,4 +1,4 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<RegisterViewModel>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<PlanViewModel>
 @{
     Layout = ViewTypes.Layouts.Core;
 }
@@ -11,20 +11,13 @@
                 <span class="navbar__brand--secondary">Flow</span>
             </a>
             <div>
-                <h1>Create an account to continue</h1>
+                <h1>Choose a subscription plan</h1>
             </div>
         </div>
         <div class="card__register card shadow-sm">
             <div class="card__register--body card-body">
-                @Html.Action(ViewTypes.Register.Action, ViewTypes.Register.Controller)
+                @Html.Action(ViewTypes.Plan.Action, ViewTypes.Plan.Controller)
             </div>
-        </div>
-        <div class="card__register--footer">
-            <p class="text__muted">
-                Already a member? <a class="link__primary"
-                                     href="/"
-                                     target="_self">Sign in</a>
-            </p>
         </div>
     </div>
 </div>

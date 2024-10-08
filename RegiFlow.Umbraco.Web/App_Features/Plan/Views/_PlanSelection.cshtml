@@ -1,0 +1,26 @@
+﻿@using RegiFlow.Umbraco.Web.App_Features.Plan.Controllers
+@model PlanFormModel
+@{
+    Html.EnableClientValidation();
+    Html.EnableUnobtrusiveJavaScript();
+}
+
+@using (Html.BeginUmbracoForm<PlanSurfaceController>(
+    action: nameof(PlanSurfaceController.ContinueToPayment),
+    method: FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-12">
+            <div class="mb-3">
+
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="d-grid">
+                <button class="btn btn--primary" type="submit">Go to payment</button>
+            </div>
+        </div>
+    </div>
+}

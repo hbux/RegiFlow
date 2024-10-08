@@ -16,11 +16,19 @@
         public static class Register
         {
             public const string View = "~/App_Features/Register/Views/Register.cshtml";
+            public const string Form = "~/App_Features/Register/Views/_BasicDetails.cshtml";
             
-            public const string BasicDetailsView = "~/App_Features/Register/Views/_BasicDetails.cshtml";
-            public const string BasicDetailsAction = "BasicDetails";
-
+            public const string Action = "BasicDetails";
             public const string Controller = "RegisterSurface";
+        }
+
+        public static class Plan
+        {
+            public const string View = "~/App_Features/Plan/Views/Plan.cshtml";
+            public const string Form = "~/App_Features/Plan/Views/_PlanSelection.cshtml";
+            
+            public const string Action = "PlanSelection";
+            public const string Controller = "PlanSurface";
         }
     }
 }

@@ -335,6 +335,7 @@
     <Compile Include="App_Data\Models\Home.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\Plan.generated.cs" />
     <Compile Include="App_Data\Models\Register.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaArticle.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaAudio.generated.cs" />
@@ -344,6 +345,12 @@
     <Compile Include="App_Features\Account\Overview\Controllers\AccountController.cs" />
     <Compile Include="App_Features\Account\Overview\Models\AccountViewModel.cs" />
     <Compile Include="App_Features\Account\Overview\Services\AccountService.cs" />
+    <Compile Include="App_Features\Plan\Composers\PlanComposer.cs" />
+    <Compile Include="App_Features\Plan\Controllers\PlanController.cs" />
+    <Compile Include="App_Features\Plan\Controllers\PlanSurfaceController.cs" />
+    <Compile Include="App_Features\Plan\Models\PlanFormModel.cs" />
+    <Compile Include="App_Features\Plan\Models\PlanViewModel.cs" />
+    <Compile Include="App_Features\Plan\Services\PlanService.cs" />
     <Compile Include="App_Features\Register\Composers\RegisterComposer.cs" />
     <Compile Include="App_Features\Register\Controllers\RegisterController.cs" />
     <Compile Include="App_Features\Register\Controllers\RegisterSurfaceController.cs" />
@@ -351,6 +358,7 @@
     <Compile Include="App_Features\Register\Models\RegisterViewModel.cs" />
     <Compile Include="App_Features\Register\Services\RegisterService.cs" />
     <Compile Include="App_Features\Shared\Constants\ViewTypes.cs" />
+    <Compile Include="App_Features\Shared\Extensions\UmbracoHelperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -377,6 +385,8 @@
     <Content Include="App_Features\Account\Overview\Views\Web.config" />
     <Content Include="App_Features\Register\Views\Web.config" />
     <Content Include="App_Features\Register\Views\_BasicDetails.cshtml" />
+    <Content Include="App_Features\Plan\Views\Web.config" />
+    <Content Include="App_Features\Plan\Views\_PlanSelection.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -401,6 +411,7 @@
     <Content Include="prebuild_assets\scss\_content.scss" />
     <Content Include="prebuild_assets\scss\_links.scss" />
     <Content Include="prebuild_assets\scss\_forms.scss" />
+    <Content Include="App_Features\Plan\Views\Plan.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

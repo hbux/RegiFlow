@@ -2,6 +2,7 @@
 using RegiFlow.Umbraco.Web.App_Features.Register.Services;
 using RegiFlow.Umbraco.Web.App_Features.Shared.Constants;
 using System.Web.Mvc;
+using Umbraco.Web;
 using Umbraco.Web.Mvc;
 
 namespace RegiFlow.Umbraco.Web.App_Features.Register.Controllers
@@ -24,7 +25,9 @@ namespace RegiFlow.Umbraco.Web.App_Features.Register.Controllers
                 return CurrentUmbracoPage();
             }
 
-            return CurrentUmbracoPage();
+            var umbracoNode = _registerService.ContinueToPlanSelection(model);
+
+            return Redirect(umbracoNode.Url());
         }
 
         [ChildActionOnly]
@@ -32,7 +35,7 @@ namespace RegiFlow.Umbraco.Web.App_Features.Register.Controllers
         {
             var viewModel = _registerService.GetFormModel();
 
-            return PartialView(ViewTypes.Register.BasicDetailsView, viewModel);
+            return PartialView(ViewTypes.Register.Form, viewModel);
         }
     }
 }
