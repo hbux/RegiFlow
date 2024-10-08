@@ -1,13 +1,13 @@
 ﻿using RegiFlow.Umbraco.Web.App_Features.Register.Models;
 using RegiFlow.Umbraco.Web.App_Features.Register.Services;
+using RegiFlow.Umbraco.Web.App_Features.Shared;
 using RegiFlow.Umbraco.Web.App_Features.Shared.Constants;
 using System.Web.Mvc;
 using Umbraco.Web;
-using Umbraco.Web.Mvc;
 
 namespace RegiFlow.Umbraco.Web.App_Features.Register.Controllers
 {
-    public class RegisterSurfaceController : SurfaceController
+    public sealed class RegisterSurfaceController : BaseSurfaceController
     {
         private readonly IRegisterService _registerService;
 

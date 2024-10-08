@@ -1,12 +1,12 @@
 ﻿using RegiFlow.Umbraco.Web.App_Features.Plan.Models;
 using RegiFlow.Umbraco.Web.App_Features.Plan.Services;
+using RegiFlow.Umbraco.Web.App_Features.Shared;
 using RegiFlow.Umbraco.Web.App_Features.Shared.Constants;
 using System.Web.Mvc;
-using Umbraco.Web.Mvc;
 
 namespace RegiFlow.Umbraco.Web.App_Features.Plan.Controllers
 {
-    public class PlanSurfaceController : SurfaceController
+    public sealed class PlanSurfaceController : BaseSurfaceController
     {
         private readonly IPlanService _planService;
 

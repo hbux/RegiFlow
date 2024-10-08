@@ -357,6 +357,7 @@
     <Compile Include="App_Features\Register\Models\RegisterFormModel.cs" />
     <Compile Include="App_Features\Register\Models\RegisterViewModel.cs" />
     <Compile Include="App_Features\Register\Services\RegisterService.cs" />
+    <Compile Include="App_Features\Shared\Controllers\BaseSurfaceController.cs" />
     <Compile Include="App_Features\Shared\Constants\ViewTypes.cs" />
     <Compile Include="App_Features\Shared\Extensions\UmbracoHelperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
