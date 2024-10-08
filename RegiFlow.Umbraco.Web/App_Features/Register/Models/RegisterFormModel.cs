@@ -21,11 +21,13 @@ namespace RegiFlow.Umbraco.Web.App_Features.Register.Models
 
         [DisplayName("Password")]
         [Required(ErrorMessage = "Please enter a password")]
+        [MinLength(8, ErrorMessage = "Password must be at least 8 characters")]
         [MaxLength(64, ErrorMessage = "Password exceeds maximum length of 64 characters")]
         public string Password { get; set; }
 
         [DisplayName("Confirm password")]
         [Required(ErrorMessage = "Please re-enter your password")]
+        [MinLength(8, ErrorMessage = "Confirm password must be at least 8 characters")]
         [MaxLength(64, ErrorMessage = "Confirm password exceeds maximum length of 64 characters")]
         [Compare(nameof(Password), ErrorMessage = "Passwords do not match")]
         public string ConfirmPassword { get; set; }
