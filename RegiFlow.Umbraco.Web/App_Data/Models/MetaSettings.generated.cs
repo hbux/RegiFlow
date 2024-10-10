@@ -19,78 +19,79 @@ using Umbraco.ModelsBuilder.Embedded;
 
 namespace RegiFlow.Umbraco.Web.App_Data.Models
 {
-	/// <summary>Home</summary>
-	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IContentSettings, IMetaSettings, INavigationSettings, ISearchSettings
+	// Mixin Content Type with alias "metaSettings"
+	/// <summary>Meta Settings</summary>
+	public partial interface IMetaSettings : IPublishedElement
+	{
+		/// <summary>Meta Description</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		string MetaDescription { get; }
+
+		/// <summary>Meta Keywords</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		global::System.Collections.Generic.IEnumerable<string> MetaKeywords { get; }
+
+		/// <summary>Meta Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		string MetaTitle { get; }
+	}
+
+	/// <summary>Meta Settings</summary>
+	[PublishedModel("metaSettings")]
+	public partial class MetaSettings : PublishedElementModel, IMetaSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		public new const string ModelTypeAlias = "home";
+		public new const string ModelTypeAlias = "metaSettings";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Home, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<MetaSettings, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Home(IPublishedContent content)
+		public MetaSettings(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Enable Scroll-to-top?: If enabled, the scroll-to-top button will be visible.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("enableScrollToTop")]
-		public virtual bool EnableScrollToTop => global::RegiFlow.Umbraco.Web.App_Data.Models.ContentSettings.GetEnableScrollToTop(this);
-
-		///<summary>
 		/// Meta Description: A brief description of the page.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
 		[ImplementPropertyType("metaDescription")]
-		public virtual string MetaDescription => global::RegiFlow.Umbraco.Web.App_Data.Models.MetaSettings.GetMetaDescription(this);
+		public virtual string MetaDescription => GetMetaDescription(this);
+
+		/// <summary>Static getter for Meta Description</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		public static string GetMetaDescription(IMetaSettings that) => that.Value<string>("metaDescription");
 
 		///<summary>
 		/// Meta Keywords: A series of keywords for the page.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
 		[ImplementPropertyType("metaKeywords")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> MetaKeywords => global::RegiFlow.Umbraco.Web.App_Data.Models.MetaSettings.GetMetaKeywords(this);
+		public virtual global::System.Collections.Generic.IEnumerable<string> MetaKeywords => GetMetaKeywords(this);
+
+		/// <summary>Static getter for Meta Keywords</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		public static global::System.Collections.Generic.IEnumerable<string> GetMetaKeywords(IMetaSettings that) => that.Value<global::System.Collections.Generic.IEnumerable<string>>("metaKeywords");
 
 		///<summary>
 		/// Meta Title: The title of the page, which is typically displayed in the browser tab. If left empty, the content node of the page will be used.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
 		[ImplementPropertyType("metaTitle")]
-		public virtual string MetaTitle => global::RegiFlow.Umbraco.Web.App_Data.Models.MetaSettings.GetMetaTitle(this);
+		public virtual string MetaTitle => GetMetaTitle(this);
 
-		///<summary>
-		/// Navigation Description: The description of the page.
-		///</summary>
+		/// <summary>Static getter for Meta Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("navigationDescription")]
-		public virtual string NavigationDescription => global::RegiFlow.Umbraco.Web.App_Data.Models.NavigationSettings.GetNavigationDescription(this);
-
-		///<summary>
-		/// Navigation Title: The title of the page.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("navigationTitle")]
-		public virtual string NavigationTitle => global::RegiFlow.Umbraco.Web.App_Data.Models.NavigationSettings.GetNavigationTitle(this);
-
-		///<summary>
-		/// Hide From Search?: If enabled, this will not appear in searches.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("hideFromSearch")]
-		public virtual bool HideFromSearch => global::RegiFlow.Umbraco.Web.App_Data.Models.SearchSettings.GetHideFromSearch(this);
+		public static string GetMetaTitle(IMetaSettings that) => that.Value<string>("metaTitle");
 	}
 }

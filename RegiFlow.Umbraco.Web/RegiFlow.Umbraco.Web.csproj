@@ -330,13 +330,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\Models\Account.generated.cs" />
+    <Compile Include="App_Data\Models\ContentSettings.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\Home.generated.cs" />
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\MetaSettings.generated.cs" />
+    <Compile Include="App_Data\Models\NavigationSettings.generated.cs" />
     <Compile Include="App_Data\Models\Plan.generated.cs" />
+    <Compile Include="App_Data\Models\ProductSettings.generated.cs" />
     <Compile Include="App_Data\Models\Register.generated.cs" />
+    <Compile Include="App_Data\Models\SearchSettings.generated.cs" />
+    <Compile Include="App_Data\Models\Subscription.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaArticle.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaAudio.generated.cs" />
     <Compile Include="App_Data\Models\UmbracoMediaVectorGraphics.generated.cs" />

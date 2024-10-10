@@ -19,85 +19,85 @@ using Umbraco.ModelsBuilder.Embedded;
 
 namespace RegiFlow.Umbraco.Web.App_Data.Models
 {
-	/// <summary>Plan</summary>
-	[PublishedModel("plan")]
-	public partial class Plan : PublishedContentModel, IContentSettings, IMetaSettings, INavigationSettings, ISearchSettings
+	/// <summary>Subscription</summary>
+	[PublishedModel("subscription")]
+	public partial class Subscription : PublishedElementModel, IProductSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		public new const string ModelTypeAlias = "plan";
+		public new const string ModelTypeAlias = "subscription";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
 		public new static IPublishedContentType GetModelContentType()
 			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Plan, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Subscription, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 #pragma warning restore 0109
 
 		// ctor
-		public Plan(IPublishedContent content)
+		public Subscription(IPublishedElement content)
 			: base(content)
 		{ }
 
 		// properties
 
 		///<summary>
-		/// Subscriptions: The featured subscription plans to display.
+		/// Billing Period: The frequency of charge.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("subscriptions")]
-		public virtual global::Umbraco.Core.Models.Blocks.BlockListModel Subscriptions => this.Value<global::Umbraco.Core.Models.Blocks.BlockListModel>("subscriptions");
+		[ImplementPropertyType("billingPeriod")]
+		public virtual string BillingPeriod => global::RegiFlow.Umbraco.Web.App_Data.Models.ProductSettings.GetBillingPeriod(this);
 
 		///<summary>
-		/// Enable Scroll-to-top?: If enabled, the scroll-to-top button will be visible.
+		/// Is Free?: If enabled, this product or service is free.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("enableScrollToTop")]
-		public virtual bool EnableScrollToTop => global::RegiFlow.Umbraco.Web.App_Data.Models.ContentSettings.GetEnableScrollToTop(this);
+		[ImplementPropertyType("isFree")]
+		public virtual bool IsFree => global::RegiFlow.Umbraco.Web.App_Data.Models.ProductSettings.GetIsFree(this);
 
 		///<summary>
-		/// Meta Description: A brief description of the page.
+		/// Is Recurring?: If enabled, this is a recurring charge.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("metaDescription")]
-		public virtual string MetaDescription => global::RegiFlow.Umbraco.Web.App_Data.Models.MetaSettings.GetMetaDescription(this);
+		[ImplementPropertyType("isRecurring")]
+		public virtual bool IsRecurring => global::RegiFlow.Umbraco.Web.App_Data.Models.ProductSettings.GetIsRecurring(this);
 
 		///<summary>
-		/// Meta Keywords: A series of keywords for the page.
+		/// Marketing Features: A list of product features.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("metaKeywords")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> MetaKeywords => global::RegiFlow.Umbraco.Web.App_Data.Models.MetaSettings.GetMetaKeywords(this);
+		[ImplementPropertyType("marketingFeatures")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> MarketingFeatures => global::RegiFlow.Umbraco.Web.App_Data.Models.ProductSettings.GetMarketingFeatures(this);
 
 		///<summary>
-		/// Meta Title: The title of the page, which is typically displayed in the browser tab. If left empty, the content node of the page will be used.
+		/// Price In Pounds: The price amount of the product or service.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("metaTitle")]
-		public virtual string MetaTitle => global::RegiFlow.Umbraco.Web.App_Data.Models.MetaSettings.GetMetaTitle(this);
+		[ImplementPropertyType("priceInPounds")]
+		public virtual decimal PriceInPounds => global::RegiFlow.Umbraco.Web.App_Data.Models.ProductSettings.GetPriceInPounds(this);
 
 		///<summary>
-		/// Navigation Description: The description of the page.
+		/// Description: The description of the product or service.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("navigationDescription")]
-		public virtual string NavigationDescription => global::RegiFlow.Umbraco.Web.App_Data.Models.NavigationSettings.GetNavigationDescription(this);
+		[ImplementPropertyType("productDescription")]
+		public virtual string ProductDescription => global::RegiFlow.Umbraco.Web.App_Data.Models.ProductSettings.GetProductDescription(this);
 
 		///<summary>
-		/// Navigation Title: The title of the page.
+		/// Product Identifier: The UUID of the product.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("navigationTitle")]
-		public virtual string NavigationTitle => global::RegiFlow.Umbraco.Web.App_Data.Models.NavigationSettings.GetNavigationTitle(this);
+		[ImplementPropertyType("productIdentifier")]
+		public virtual string ProductIdentifier => global::RegiFlow.Umbraco.Web.App_Data.Models.ProductSettings.GetProductIdentifier(this);
 
 		///<summary>
-		/// Hide From Search?: If enabled, this will not appear in searches.
+		/// Name: Name of the product or service.
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
-		[ImplementPropertyType("hideFromSearch")]
-		public virtual bool HideFromSearch => global::RegiFlow.Umbraco.Web.App_Data.Models.SearchSettings.GetHideFromSearch(this);
+		[ImplementPropertyType("productName")]
+		public virtual string ProductName => global::RegiFlow.Umbraco.Web.App_Data.Models.ProductSettings.GetProductName(this);
 	}
 }

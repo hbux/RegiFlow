@@ -21,7 +21,7 @@ namespace RegiFlow.Umbraco.Web.App_Data.Models
 {
 	/// <summary>Register</summary>
 	[PublishedModel("register")]
-	public partial class Register : PublishedContentModel
+	public partial class Register : PublishedContentModel, IContentSettings, IMetaSettings, INavigationSettings, ISearchSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -43,5 +43,54 @@ namespace RegiFlow.Umbraco.Web.App_Data.Models
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Enable Scroll-to-top?: If enabled, the scroll-to-top button will be visible.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		[ImplementPropertyType("enableScrollToTop")]
+		public virtual bool EnableScrollToTop => global::RegiFlow.Umbraco.Web.App_Data.Models.ContentSettings.GetEnableScrollToTop(this);
+
+		///<summary>
+		/// Meta Description: A brief description of the page.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		[ImplementPropertyType("metaDescription")]
+		public virtual string MetaDescription => global::RegiFlow.Umbraco.Web.App_Data.Models.MetaSettings.GetMetaDescription(this);
+
+		///<summary>
+		/// Meta Keywords: A series of keywords for the page.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		[ImplementPropertyType("metaKeywords")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> MetaKeywords => global::RegiFlow.Umbraco.Web.App_Data.Models.MetaSettings.GetMetaKeywords(this);
+
+		///<summary>
+		/// Meta Title: The title of the page, which is typically displayed in the browser tab. If left empty, the content node of the page will be used.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		[ImplementPropertyType("metaTitle")]
+		public virtual string MetaTitle => global::RegiFlow.Umbraco.Web.App_Data.Models.MetaSettings.GetMetaTitle(this);
+
+		///<summary>
+		/// Navigation Description: The description of the page.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		[ImplementPropertyType("navigationDescription")]
+		public virtual string NavigationDescription => global::RegiFlow.Umbraco.Web.App_Data.Models.NavigationSettings.GetNavigationDescription(this);
+
+		///<summary>
+		/// Navigation Title: The title of the page.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		[ImplementPropertyType("navigationTitle")]
+		public virtual string NavigationTitle => global::RegiFlow.Umbraco.Web.App_Data.Models.NavigationSettings.GetNavigationTitle(this);
+
+		///<summary>
+		/// Hide From Search?: If enabled, this will not appear in searches.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.18.14")]
+		[ImplementPropertyType("hideFromSearch")]
+		public virtual bool HideFromSearch => global::RegiFlow.Umbraco.Web.App_Data.Models.SearchSettings.GetHideFromSearch(this);
 	}
 }
